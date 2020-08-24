@@ -1,161 +1,90 @@
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  width: 580px;
-  margin: 0 auto;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  min-width: 640px;
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Verdana", "Tahoma", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #f2f2f2;
-  background-color: #17161a;
-}
-
-.section-title {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-a {
-  color: #6653d9;
-}
-
-a:focus {
-  outline-color: #b6aaff;
-}
-
-.page-header {
-  margin-bottom: 40px;
-  color: #333333;
-  background-color: #ffffff;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.page-header .container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-image: url("img/raccoons.svg");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 290px 212px;
-}
-
-.page-header a {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.page-title {
-  margin: 0;
-  margin-bottom: 4px;
-  padding: 0;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-}
-
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 32px;
- }
-
-.about-image {
-   width: 147px;
-   height: 147px;
-   border-radius: 50%;
- }
-
-.about-content {
-   width: 410px;
-   font-size: 14px;
-   line-height: 24px;
- }
-
-.about-content p {
-   margin: 0;
-   margin-bottom: 12px;
-   padding: 0;
- }
-
-.status {
-  margin-bottom: 32px;
-}
-
-.status p {
-  margin: 0;
-  padding-top: 12px;
-  padding-right: 32px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  border-radius: 32px 0;
-  font-size: 16px;
-  line-height: 24px;
-  font-style: italic;
-  color: #333333;
-  background-color: #ffffff;
-}
-
-.contacts {
-  margin-bottom: 82px;
-}
-
-.contacts img {
-  width: 146px;
-  height: 146px;
-  margin-right: 24px;
-}
-
-.contacts p {
-  margin: 0;
-  margin-bottom: 12px;
-  padding: 0;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-p.contacts-name {
-  margin-top: 20px;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 20px;
-}
-
-.contacts a {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.page-footer {
-  margin-top: auto;
-  color: #ffffff;
-  background-color: #6653d9;
-}
-
-.page-footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 14px;
-}
-
-.page-footer p {
-  margin: 0;
-  padding: 0;
-}
+		body { 
+		font-family: "Comic Sans MS", Comic Sans, Cursive; /* Шрифт */
+		transition: all 0.3s ease;
+		}
+		.letter { 
+		color: #666; /* Wвет символов */ 
+		font-size: 300%; /* Размер шрифта в процентах */ 
+		font-family: Gabriola, Cursive; /* Шрифт */ 
+		position: relative; /* Относительное позиционирование */ 
+		top: 5px; /* Сдвиг сверху */ 
+		}
+		.layer {
+		background: #fc3; /* Цвет фона */
+		border: 2px solid black;  /* Параметры рамки */
+		padding: 5px; /* Поля вокруг текста */
+		margin: 2px;
+		width: 250px;		
+		}
+		.box {
+		width: 250px;
+		margin: 2px;
+		border: 2px solid black;
+		background: white;
+		padding: 2px;		
+		}
+		.box_span {
+		width: 250px;
+		margin: 1px;
+		border: 1px solid black;
+		background: white;
+		padding: 1px;
+		font-family: "Comic Sans MS", Comic Sans, Cursive;
+		font-size: 80%;		
+		}		
+		.picture a {
+		text-decoration: none;
+		color: black;
+		}
+		.picture a:visited {
+		text-decoration: none;
+		color: black; /* Цвет посещенной ссылки */
+		} 
+		.picture a:hover {
+		text-decoration: none; /* Убираем подчеркивание */
+		color: #fff; /* Цвет ссылки при наведении на нее курсора мыши */  
+		background: #e24486; /* Цвет фона */
+		}
+		.ol li {
+		list-style-type: none; /* Убираем исходные маркеры */
+		}
+		.ol {
+		counter-reset: num; /* Задаём имя счетчика */
+		}
+		.ol li::before {
+		counter-increment: num; /* Увеличиваем значение счётчика */
+		content: counter(num) '. '; /* Выводим число */
+		font-size: 200%;
+		}
+		.ol ul li{
+		list-style-type: none; 
+		}
+		.ol ul li::before {
+		content: "➤";
+		font-size: 100%;
+		counter-increment: none;
+		}
+		.ol img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 0 0;
+		padding: 5px; /* Расстояние от картинки до рамки */
+		background: #666; /* Цвет фона */
+		width: 100px;
+		height: 100px;
+		vspace: 5px;
+		opacity: 1;
+		}
+		.ol img:hover {
+		background: #e24486;
+		opacity: 0.6;
+		}
+		input::placeholder {
+		opacity: 1; 
+		transition: opacity 0.3s ease;
+		}
+		input:focus::placeholder {
+		opacity: 0; 
+		transition: opacity 0.3s ease;
+		}
