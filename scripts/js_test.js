@@ -13,6 +13,44 @@ function myFunction2 () {
         
 	document.getElementById("demo2").hidden = !document.getElementById("demo2").hidden;
 }
+
+function printPic(e){
+	let nameBox = document.getElementById("name_pic");
+	let ageBox = document.getElementById("age_pic");
+	let levelBox = document.getElementById("level_pic");
+	let pictureBox = document.getElementById("picture_pic");
+	let valName = nameBox.value;
+	let valAge = ageBox.value;
+	let valLevel = levelBox.value;
+	let valPicture = pictureBox.value;
+	let printPic = document.getElementById("printPic");
+	let liElement = document.createElement("li");
+	let divElement = document.createElement("div");
+	let ulElement = document.createElement("ul");
+	let age_liElement = document.createElement("li");
+	let level_liElement = document.createElement("li");
+	let pictureElement = document.createElement("img")
+	liElement.className = "name_st";
+	age_liElement.className = "age_st";
+	level_liElement.className = "level_st";
+		
+	liElement.textContent = "";
+	divElement.textContent = valName;
+	ulElement.textContent = "";
+	age_liElement.textContent = "Возраст - "+valAge;
+	level_liElement.textContent = "Курс - "+valLevel;
+	pictureElement.src = valPicture;
+	printPic.appendChild(liElement);
+	liElement.appendChild(divElement);
+	liElement.appendChild(ulElement);
+	ulElement.appendChild(age_liElement);
+	ulElement.appendChild(level_liElement);
+	liElement.appendChild(pictureElement);
+}
+    
+let printButton2 = document.getElementById('print_pic');
+	
+printButton2.addEventListener("click", printPic);
         
 function printForm(e){
 	let keyBox = document.getElementById("print_text_box");
