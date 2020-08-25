@@ -6,7 +6,7 @@ input {
 	background: white;
 	color: #6653d9;
 	border: 1px solid #6653d9;
-	margin: 0;
+	margin: 2px;
 	padding-top: 6px;
 	padding-right: 16px;
 	padding-bottom: 8px;
@@ -100,7 +100,7 @@ select option:hover {
 
 .theme-button {
 	position: relative;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding-top: 7px;
 	padding-right: 16px;
 	padding-bottom: 7px;
@@ -109,6 +109,7 @@ select option:hover {
 	background-color: white;
 	color: #6653d9;
 	border: 1px solid #6653d9;
+	margin-bottom: 20px;
 }
 
 .theme-button:active {

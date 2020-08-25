@@ -40,24 +40,24 @@
 					</form>
 					<div id="printBlock"></div>
 				<h2>Список студентов</h2>
-					<ol id="printPic" class="photo-students">	
-						<li><div>Иванов Иван Иванович</div>
+					<ol name="printPic" id="printPic" class="photo-students">	
+						<li class="name_st" value="Иванов Иван Иванович"><div>Иванов Иван Иванович</div>
 							<ul>	
-								<li>Возраст - 23</li>
-								<li>Курс - 3</li>
+								<li class="age_st">Возраст - 23</li>
+								<li class="level_st">Курс - 3</li>
 								<li><a href="img/20022014.jpeg" download target="_blank">Скачать анкету</a></li>
 								<li><a href="mailto:example@ceki.ru">Написать на почту</a></li>
 							</ul>
 						<img src="https://www.tisso33.ru/images/sidepart3.jpg"></li>
-						<li><div>Петров</div>
+						<li class="name_st" value="Петров"><div>Петров</div>
 							<ul>
-								<li>Возраст - 19</li>
-								<li>Курс - 2</li>
+								<li class="age_st">Возраст - 19</li>
+								<li class="level_st">Курс - 2</li>
 								<li><a href="img/20022014.jpeg" download target="_blank">Скачать анкету</a></li>
 								<li><a href="mailto:example@ceki.ru">Написать на почту</a></li>
 							</ul>
 						<img src="https://image.freepik.com/free-photo/bald-young-handsome-man-with-blond-beard-smiling_21730-5259.jpg"></li>
-						<li class="name_st"><div>Сидоров</div>
+						<li class="name_st" value="Сидоров"><div>Сидоров</div>
 							<ul>
 								<li class="age_st">Возраст - 18</li>
 								<li class="level_st">Курс - 1</li>
@@ -66,13 +66,6 @@
 							</ul>
 						<img src="https://img3.stockfresh.com/files/f/feedough/m/57/4605639_stock-photo-closeup-of-a-man-wearing-glasses.jpg" title="Сидоров"></li>
 					</ol>
-					<form>
-						<input type="text" id="name_pic" placeholder="Ф.И.О.">
-						<input type="text" id="age_pic" placeholder="Возраст">
-						<input type="text" id="level_pic" placeholder="Курс">
-						<input type="text" id="picture_pic" placeholder="Интернет-ссылка на фото">						
-						<input class="theme-button" type="button" id="print_pic" value="Вывести"/>
-					</form>
 					<form name="Form_students">
 						<p><select name="students" size="4">
 							<option disabled>Выберите студента</option>
@@ -80,9 +73,16 @@
 							<option value="Петров">Петров</option>
 							<option value="Сидоров">Сидоров</option>
 						</select></p>
-						<p><input type="text" id="textInput" placeholder="Введите фамилию" /></p>
-						<p><input type="text" id="valueInput" placeholder="Повторите фамилию" /></p>
-						<p><input class="theme-button" type="button" name="addButton" value="Добавить"/> <input class="theme-button" type="button" name="removeButton" value="Удалить" /></p>
+					</form>
+					<form>
+						<input type="text" id="name_pic" placeholder="Ф.И.О.">
+						<input type="text" id="age_pic" placeholder="Возраст">
+						<input type="text" id="level_pic" placeholder="Курс">
+						<input type="text" id="picture_pic" placeholder="Интернет-ссылка на фото">
+					</form>	
+					<form>					
+						<input class="theme-button" type="button" id="print_pic" value="Добавить"/>
+						<input class="theme-button" type="button" id="remove_pic" value="Удалить"/>
 					</form>
 			</section>
 		</main>

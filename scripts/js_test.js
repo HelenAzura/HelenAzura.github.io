@@ -14,27 +14,48 @@ function myFunction2 () {
 	document.getElementById("demo2").hidden = !document.getElementById("demo2").hidden;
 }
 
+function printForm(e){
+	let keyBox = document.getElementById("print_text_box");
+	let val = keyBox.value;
+	let printBlock = document.getElementById("printBlock");
+	let pElement = document.createElement("p");
+	
+	pElement.textContent = val;
+	printBlock.appendChild(pElement);
+}
+      
+function delete_printForm() {
+	document.getElementById('printBlock').innerText = null;
+}
+      
+let printButton = document.getElementById('print_tx'),
+    clearButton = document.getElementById('clear_tx');
+	
+printButton.addEventListener("click", printForm);
+clearButton.addEventListener("click", delete_printForm);
+
 function printPic(e){
-	let nameBox = document.getElementById("name_pic");
-	let ageBox = document.getElementById("age_pic");
-	let levelBox = document.getElementById("level_pic");
-	let pictureBox = document.getElementById("picture_pic");
-	let valName = nameBox.value;
-	let valAge = ageBox.value;
-	let valLevel = levelBox.value;
-	let valPicture = pictureBox.value;
-	let printPic = document.getElementById("printPic");
-	let liElement = document.createElement("li");
-	let divElement = document.createElement("div");
-	let ulElement = document.createElement("ul");
-	let age_liElement = document.createElement("li");
-	let level_liElement = document.createElement("li");
-	let pictureElement = document.createElement("img")
+	let nameBox = document.getElementById("name_pic"),
+		ageBox = document.getElementById("age_pic"),
+		levelBox = document.getElementById("level_pic"),
+		pictureBox = document.getElementById("picture_pic"),
+		printPic = document.getElementById("printPic");
+	let valName = nameBox.value,
+		valAge = ageBox.value,
+		valLevel = levelBox.value,
+		valPicture = pictureBox.value;
+	let liElement = document.createElement("li"),
+		divElement = document.createElement("div"),
+		ulElement = document.createElement("ul"),
+		age_liElement = document.createElement("li"),
+		level_liElement = document.createElement("li"),
+		pictureElement = document.createElement("img");
 	liElement.className = "name_st";
 	age_liElement.className = "age_st";
 	level_liElement.className = "level_st";
 		
 	liElement.textContent = "";
+	liElement.value = valName;
 	divElement.textContent = valName;
 	ulElement.textContent = "";
 	age_liElement.textContent = "Возраст - "+valAge;
@@ -48,47 +69,30 @@ function printPic(e){
 	liElement.appendChild(pictureElement);
 }
     
-let printButton2 = document.getElementById('print_pic');
+let printPicButton = document.getElementById('print_pic'),
+	removePicButton = document.getElementById('remove_pic');
 	
-printButton2.addEventListener("click", printPic);
-        
-function printForm(e){
-	let keyBox = document.getElementById("print_text_box");
-	let val = keyBox.value;
-	let printBlock = document.getElementById("printBlock");
-	let pElement = document.createElement("p");
-	
-	pElement.textContent = val;
-	printBlock.appendChild(pElement);
-}
-      
-function clear1() {
-	document.getElementById('printBlock').innerText = null;
-}
-      
-let printButton = document.getElementById('print_tx'),
-    clearButton = document.getElementById('clear_tx');
-	
-printButton.addEventListener("click", printForm);
-clearButton.addEventListener("click", clear1);
-      
+printPicButton.addEventListener("click", printPic);
+     
 function addOption(){
-	let text = document.getElementById('textInput').value;
-	let value = document.getElementById('valueInput').value;
+	let nameBox = document.getElementById("name_pic");
+	let valName = nameBox.value;
+	let text = valName;
+	let value = valName;
 	let newOption = new Option(text, value);
 	
 	studentsSelect.options[studentsSelect.options.length]=newOption;
 }
       
 function removeOption(){
-	let selectedIndex = studentsSelect.options.selectedIndex;
+	let selectedId = studentsSelect.options.selectedIndex;
+	let selectedVal = document.querySelector('li[value="Сидоров"]');	
 	
-	studentsSelect.options[selectedIndex] = null;
+		studentsSelect.options[selectedId] = null;
+		selectedVal = null;
 }
-      
-let addButton = Form_students.addButton,
-	removeButton = Form_students.removeButton, 
-	studentsSelect = Form_students.students;
-      
-addButton.addEventListener("click", addOption);
-removeButton.addEventListener("click", removeOption);
+     
+let studentsSelect = Form_students.students;
+ 
+printPicButton.addEventListener("click", addOption);
+removePicButton.addEventListener("click", removeOption);
