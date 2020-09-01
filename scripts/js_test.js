@@ -34,7 +34,7 @@ let printButton = document.getElementById('print_tx'),
 printButton.addEventListener("click", printForm);
 clearButton.addEventListener("click", delete_printForm);
 
-function printPic(e){
+function printPicture(e){
 	let nameBox = document.getElementById("name_pic"),
 		ageBox = document.getElementById("age_pic"),
 		levelBox = document.getElementById("level_pic"),
@@ -54,8 +54,8 @@ function printPic(e){
 	age_liElement.className = "age_st";
 	level_liElement.className = "level_st";
 		
+	liElement.setAttribute('value', valName);
 	liElement.textContent = "";
-	liElement.value = valName;
 	divElement.textContent = valName;
 	ulElement.textContent = "";
 	age_liElement.textContent = "Возраст - "+valAge;
@@ -72,7 +72,7 @@ function printPic(e){
 let printPicButton = document.getElementById('print_pic'),
 	removePicButton = document.getElementById('remove_pic');
 	
-printPicButton.addEventListener("click", printPic);
+printPicButton.addEventListener("click", printPicture);
      
 function addOption(){
 	let nameBox = document.getElementById("name_pic");
@@ -85,11 +85,15 @@ function addOption(){
 }
       
 function removeOption(){
-	let selectedId = studentsSelect.options.selectedIndex;
-	let selectedVal = document.querySelector('li[value="Сидоров"]');	
-	
-		studentsSelect.options[selectedId] = null;
-		selectedVal = null;
+	let selectedId = document.getElementById("students").selectedIndex;
+	let optionsStudent = document.getElementById("students").options;
+	let valueStudent = optionsStudent[selectedId].value;
+	let selectedVal = document.querySelector("li.name_st[value="+valueStudent+"]");	
+	let very_delete = confirm("Удалить карточку?");
+	if (very_delete == true) {
+	studentsSelect[selectedId] = null;
+	selectedVal.style.display = "none";}
+	else {alert("Правильный выбор")};
 }
      
 let studentsSelect = Form_students.students;
