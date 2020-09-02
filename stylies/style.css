@@ -13,6 +13,8 @@ input {
 	padding-left: 16px;
 	border-radius: 16px 0;
 	line-height: 12px;
+	font-family: 'Amatic SC', cursive;
+	width: 200px;
 }
 
 input:focus {
@@ -24,6 +26,7 @@ input::placeholder {
 	opacity: 1; 
 	transition: opacity 0.3s ease;
 	color: #6653d9;
+	font-family: 'Amatic SC', cursive;
 }
 
 input:focus::placeholder {
@@ -39,6 +42,7 @@ select {
 	padding-right: 30px;
 	padding-left: 30px;
 	border-radius: 12px 0;
+	font-family: 'Amatic SC', cursive;
 }
 	
 select option:disabled {
@@ -56,10 +60,21 @@ select option:hover {
 	min-width: 640px;
 	min-height: 100vh;
 	margin: 0;
-	font-family: "Comic Sans MS", Comic Sans, Cursive;
+/* 	font-family: "Comic Sans MS", Comic Sans, Cursive; */
+	font-family: 'Amatic SC', cursive;
 	line-height: 18px;
 	color: #333333;
 	background-color: #eae9f2;
+}
+
+.page_body {
+	width: 600px;
+	margin: 0 auto;
+	min-height: 100vh;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .container {
@@ -77,9 +92,11 @@ select option:hover {
 }
 
 .page-header {
-	margin-bottom: 40px;
 	background-color: #ffffff;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding-left: 20px;
+	padding-right: 20px;	
 }
 
 .page-header .container {
@@ -98,10 +115,10 @@ select option:hover {
 	justify-content: end;
 }
 
-.page-header .none img { position: relative; height: 100%; height: 40px; object-fit: cover;	object-position: 0 0;}
-.page-header .none .one { z-index: 3; }
-.page-header .none .two { top: 43px; z-index: 2;}
-.page-header .none .three { top: 86px; z-index: 1;}
+.page-header .none img { position: relative;}
+.page-header .none .one { bottom: 86px; z-index: 3;}
+.page-header .none .two { bottom: 43px; z-index: 2;}
+.page-header .none .three { bottom: 0px; z-index: 1;}
 
 .theme-button {
 	position: relative;
@@ -115,6 +132,7 @@ select option:hover {
 	color: #6653d9;
 	border: 1px solid #6653d9;
 	margin-bottom: 20px;
+	font-family: 'Amatic SC', cursive;
 }
 
 .theme-button:active {
@@ -190,12 +208,13 @@ select option:hover {
 
 .photo-students li{
 	list-style-type: none;
-	background: #fc3;
+	background: #6653D9;
 	border: 2px solid gray;
 	padding: 10px;
 	margin: 5px;
 	display: flex;
 	justify-content: right;
+	color: #F2F2F2;
 }
 
 .photo-students li::before {
@@ -224,12 +243,12 @@ select option:hover {
 
 .photo-students a {
 	text-decoration: none;
-	color: gray;
+	color: #F2F2F2;
 }
 
 .photo-students a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #F2F2F2;
 	background: #e24486;
 }
 

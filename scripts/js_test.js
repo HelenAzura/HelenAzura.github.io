@@ -90,9 +90,10 @@ function removeOption(){
 	let valueStudent = optionsStudent[selectedId].value;
 	let selectedVal = document.querySelector("li.name_st[value="+valueStudent+"]");	
 	let very_delete = confirm("Удалить карточку?");
+	
 	if (very_delete == true) {
-	studentsSelect[selectedId] = null;
-	selectedVal.style.display = "none";}
+		studentsSelect[selectedId] = null;
+		selectedVal.style.display = "none";}
 	else {alert("Правильный выбор")};
 }
      

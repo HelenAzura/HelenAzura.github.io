@@ -5,29 +5,33 @@
 		<title>Мой тест</title>
 		<link rel="icon" href="img/icon_test.ico" type="image/icon">
 		<link rel="stylesheet" href="stylies/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 	</head>
-	<body class="page" style="background-color: #a6a64b">
+	<body class="page" style="background-color: #A653D9;">
 		<header class="page-header">
 			<div class="none">
-				<img src="img/map3.gif" width="319" height="40" align="center" usemap="#map" alt="Навигация">
+				<img class="three" src="img/map1.gif">
+				<img class="two" src="img/map2.gif">
+				<img class="one" src="img/map3.gif" align="center" usemap="#map" alt="Навигация">
 				<map name="map"><area shape="poly" alt="Закладка 1" coords="10,32, 15,9, 20,6, 25,2, 30,1, 35,1, 108,2, 109,6, 110,9, 100,32, 95,32, 10,32" href="1.html"><area shape="poly" alt="Закладка 2" coords="99,32, 108,9, 111,6, 114,2, 119,1, 198,1, 201,2, 202,6, 200,9, 195,32, 99,32, 99,32" href="2.html"></map>
 			</div>
 		</header>
+		<div class="page_body" style="border-right: 1px solid white; border-left: 1px solid white;">		
 		<main>
-			<section class="container">
-				<h1>Списки</h1>
-					<p><a href="index.html">Главная страница</a></p>				
-				<h2 id="name1">Список цветов</h2>
-					<ul id="demo1">
+			<div class="container">
+				<h1 style="color: #F2F2F2;">Списки</h1>
+					<p><a style="color: #F2F2F2;" href="index_2.html">Главная страница</a></p>				
+				<h2 style="color: #F2F2F2;" id="name1">Список цветов</h2>
+					<ul style="color: #F2F2F2;" id="demo1">
 						<li>Красный</li>
 						<li>Желтый</li>
 						<li>Зеленый</li>
-						<li><a href="2.html#link-text" class="site" target="_blank">Синий</a></li>
+						<li><a style="color: #F2F2F2;" href="2.html#link-text" class="site" target="_blank">Синий</a></li>
 					</ul>
 					<button class="theme-button" id="button1" type="button" onclick="myFunction1()">Свернуть</button>
-				<h2 id="name2">Список студентов</h2>
-					<ol id="demo2">
-						<li><a href="#Ivanov">Иванов</a></li>
+				<h2 style="color: #F2F2F2;" id="name2">Список студентов</h2>
+					<ol style="color: #F2F2F2;" id="demo2">
+						<li><a style="color: #F2F2F2;" href="#Ivanov">Иванов</a></li>
 						<li>Петров</li>
 						<li>Сидоров</li>
 						<li>Николаев</li>
@@ -39,7 +43,7 @@
 						<input class="theme-button" type="button" id="clear_tx" value="Очистить"/> 
 					</form>
 					<div id="printBlock"></div>
-				<h2>Список студентов</h2>
+				<h2 style="color: #F2F2F2;">Список студентов</h2>
 					<ol name="printPic" id="printPic" class="photo-students">	
 						<li class="name_st" value="Иванов"><div>Иванов</div>
 							<ul>	
@@ -84,8 +88,9 @@
 						<input class="theme-button" type="button" id="print_pic" value="Добавить"/>
 						<input class="theme-button" type="button" id="remove_pic" value="Удалить"/>
 					</form>
-			</section>
+			</div>
 		</main>
+		</div>		
 		<footer class="page-footer">
 			<div class="container">
 			<p>© Леночка</p>
