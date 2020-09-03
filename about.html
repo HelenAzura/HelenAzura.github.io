@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Мой тест</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" href="img/icon_test.ico" type="image/icon">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body id="page" class="page">
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Мой сайт-тест</h1>
+      <p><i>По всем вопросам пишите:</i><br><a href="mailto:lenochka@gmail.com">lenochka@gmail.com</a></p>
+	  <button id="theme-button" class="theme-button" type="button">Изменить тему</button>
+	  <script>
+		let page = document.getElementById("page");
+		let themeButton = document.getElementById("theme-button");
+		page.classList.add('light-theme');
+		themeButton.addEventListener("click", theme);
+		function theme() {
+			page.classList.toggle('dark-theme');
+		}
+	   </script>
+    </div>
+  </header>
+  <main>
+    <section class="about container">
+      <h2 class="section-title">Привет, я - Леночка!</h2>
+      <img class="about-image" src="img/avatar.svg" width="147" height="147" alt="Опознанный енот" title="Да, это я">
+	  <p>Смотри, что еще тут <a href="test_1.html">есть</a>.<br>
+	  А еще можно вернуться на <a href="index.html">самую главную страницу</a>.</p>
+    </section>
+    <section class="status container">
+      <h2 class="section-title">Мой статус</h2>
+      <p>#яжверстальщик!</p>
+    </section>
+    <section class="contacts container">
+      <h2 class="section-title">Контакты для связи</h2>
+        <p class="contacts-name">Леночка</p>
+        <p><i>email:</i> <a href="mailto:lenochka@gmail.com">lenochka@gmail.com</a></p>
+        <p><i>телефон:</i> <a href="tel:+77777777777">+77777777777</a></p>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <p>© Леночка</p>
+      <p>2020</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Мой тест</title>
+		<link rel="icon" href="img/icon_test.ico" type="image/icon">
+		<link rel="stylesheet" href="styles/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body class="page" style="background-color: #A653D9;">
+		<header class="page-header">
+			<div class="none">
+				<img class="three" src="img/map1.gif">
+				<img class="two" src="img/map2.gif">
+				<img class="one" src="img/map3.gif" align="center" usemap="#map" alt="Навигация">
+				<map name="map"><area shape="poly" alt="Закладка 1" coords="10,32, 15,9, 20,6, 25,2, 30,1, 35,1, 108,2, 109,6, 110,9, 100,32, 95,32, 10,32" href="test_1.html"><area shape="poly" alt="Закладка 2" coords="99,32, 108,9, 111,6, 114,2, 119,1, 198,1, 201,2, 202,6, 200,9, 195,32, 99,32, 99,32" href="test_2.html"></map>
+			</div>
+		</header>
+		<div class="page_body" style="border-right: 1px solid white; border-left: 1px solid white;">		
+		<main>
+			<div class="container">
+				<h1 style="color: #F2F2F2;">Списки</h1>
+					<p><a style="color: #F2F2F2;" href="about.html">Главная страница</a></p>
+					<p><a style="color: #F2F2F2;" href="index.html">Самая главная страница</a></p>			
+				<h2 style="color: #F2F2F2;" id="name1">Список цветов</h2>
+					<ul style="color: #F2F2F2;" id="demo1">
+						<li>Красный</li>
+						<li>Желтый</li>
+						<li>Зеленый</li>
+						<li><a style="color: #F2F2F2;" href="2.html#link-text" class="site" target="_blank">Синий</a></li>
+					</ul>
+					<button class="theme-button" id="button1" type="button" onclick="myFunction1()">Свернуть</button>
+				<h2 style="color: #F2F2F2;" id="name2">Список студентов</h2>
+					<ol style="color: #F2F2F2;" id="demo2">
+						<li><a style="color: #F2F2F2;" href="#Ivanov">Иванов</a></li>
+						<li>Петров</li>
+						<li>Сидоров</li>
+						<li>Николаев</li>
+					</ol>
+					<button class="theme-button" id="button2" type="button" onclick="myFunction2()">Свернуть</button>
+					<form>
+						<input type="text" id="print_text_box" placeholder="Введите текст">
+						<input class="theme-button" type="button" id="print_tx" value="Вывести"/>
+						<input class="theme-button" type="button" id="clear_tx" value="Очистить"/> 
+					</form>
+					<div id="printBlock"></div>
+				<h2 style="color: #F2F2F2;">Список студентов</h2>
+					<ol name="printPic" id="printPic" class="photo-students">	
+						<li class="name_st" value="Иванов"><div>Иванов</div>
+							<ul>	
+								<li class="age_st">Возраст - 23</li>
+								<li class="level_st">Курс - 3</li>
+								<li><a href="img/blank.jpeg" download target="_blank">Скачать анкету</a></li>
+								<li><a href="mailto:example@ceki.ru">Написать на почту</a></li>
+							</ul>
+						<img src="https://www.tisso33.ru/images/sidepart3.jpg"></li>
+						<li class="name_st" value="Петров"><div>Петров</div>
+							<ul>
+								<li class="age_st">Возраст - 19</li>
+								<li class="level_st">Курс - 2</li>
+								<li><a href="img/blank.jpeg" download target="_blank">Скачать анкету</a></li>
+								<li><a href="mailto:example@ceki.ru">Написать на почту</a></li>
+							</ul>
+						<img src="https://image.freepik.com/free-photo/bald-young-handsome-man-with-blond-beard-smiling_21730-5259.jpg"></li>
+						<li class="name_st" value="Сидоров"><div>Сидоров</div>
+							<ul>
+								<li class="age_st">Возраст - 18</li>
+								<li class="level_st">Курс - 1</li>
+								<li><a href="img/blank.jpeg" download target="_blank">Скачать анкету</a></li>
+								<li><a href="mailto:example@ceki.ru">Написать на почту</a></li>
+							</ul>
+						<img src="https://img3.stockfresh.com/files/f/feedough/m/57/4605639_stock-photo-closeup-of-a-man-wearing-glasses.jpg" title="Сидоров"></li>
+					</ol>
+					<form name="Form_students">
+						<p><select id="students" name="students" size="4">
+							<option disabled>Выберите студента</option>
+							<option value="Иванов">Иванов</option>
+							<option selected value="Петров">Петров</option>
+							<option value="Сидоров">Сидоров</option>
+						</select></p>
+					</form>
+					<form>
+						<input type="text" id="name_pic" placeholder="Ф.И.О.">
+						<input type="text" id="age_pic" placeholder="Возраст">
+						<input type="text" id="level_pic" placeholder="Курс">
+						<input type="text" id="picture_pic" placeholder="Интернет-ссылка на фото">
+					</form>	
+					<form>					
+						<input class="theme-button" type="button" id="print_pic" value="Добавить"/>
+						<input class="theme-button" type="button" id="remove_pic" value="Удалить"/>
+					</form>
+			</div>
+		</main>
+		</div>		
+		<footer class="page-footer">
+			<div class="container">
+			<p>© Леночка</p>
+			<p>2020</p>
+			</div>
+		</footer>				
+		<script src="scripts/js_test.js"></script>
+		</body>
+</html>
