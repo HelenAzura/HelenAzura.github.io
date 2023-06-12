@@ -106,10 +106,7 @@ removePicButton.addEventListener("click", removeOption);
 
 
  function ready() {
-    alert('DOM готов');
-
-    // изображение ещё не загружено (если не было закешировано), так что размер будет 0x0
-    alert(`Размер изображения: ${img.offsetWidth}x${img.offsetHeight}`);
+    document.getElementsByClassName('parallax-img')[0].style.backgroundImage = url('https://yandex.ru/images/search?pos=2&from=tabbar&img_url=https%3A%2F%2Fcs4.pikabu.ru%2Fpost_img%2Fbig%2F2015%2F11%2F13%2F9%2F1447424877_1469861986.jpg&text=doggy&rpt=simage&lr=213');
   }
 
 
